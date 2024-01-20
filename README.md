@@ -1,5 +1,17 @@
 # 📌 5주차 프로젝트[Project1]
 
+## 배포
+
+
+## 실행 방법
+npm run dev
+
+```js
+// .env 파일 환경 변수
+VITE_API_END_POINT
+VITE_USERNAME
+```
+
 ## 필수 프로젝트
 
 - 프로젝트 기한
