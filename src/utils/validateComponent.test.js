@@ -9,5 +9,5 @@ test('컴포넌트 생성시 new 키워드 붙였는지 여부 테스트', () =>
 
   expect(() => {
     Component();
-  }).toThrowError(NEED_NEW_KEYWORD);
+  }).toThrow(NEED_NEW_KEYWORD);
 });

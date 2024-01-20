@@ -11,7 +11,7 @@ test.each([
 ])('문자열이 아닌 경우 오류가 발생한다', (input) => {
   expect(() => {
     validateInputData(input);
-  }).toThrowError(NEED_STRING_TYPE);
+  }).toThrow(NEED_STRING_TYPE);
 });
 
 test.each([[{ title: '', content: '' }], [{ title: 'str', content: 'str' }]])(
