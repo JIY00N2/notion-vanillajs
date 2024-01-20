@@ -249,11 +249,12 @@ li {
 }
 
 .toggle-button{
-  font-size: 20px;
+  font-size: 25px;
   padding: 0rem;
   background-color: white;
   border-style: none;
   cursor: pointer;
+  margin-right: 0.2rem;
 }
 
 .documents-tree > .hidden{

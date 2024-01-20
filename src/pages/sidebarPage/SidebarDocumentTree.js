@@ -27,7 +27,7 @@ export default function SidebarDocumentTree({ $target, initialState, addDocument
           ({ id, title, documents }) => `
       <div class='documents-tree'>
         <li data-id="${id}">
-          <button class="toggle-button"> ${document.length ? "▶️" : "🔽"} </button>
+          <button class="toggle-button"> > </button>
           <div class="document-area">
             <div class="document-title"> 📄${title}</div>
             <div class="document-buttons">
