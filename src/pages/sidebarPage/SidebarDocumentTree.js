@@ -27,9 +27,11 @@ export default function SidebarDocumentTree({ $target, initialState, addDocument
           ({ id, title, documents }) => `
       <div class='documents-tree'>
         <li data-id="${id}">
-          ▶️📄${title}
-          <button class="add-button"> + </button>
-          <button class="delete-button"> - </button>
+          <div class="document-title">▶️📄${title}</div>
+          <div class="document-buttons">
+            <button class="add-button"> + </button>
+            <button class="delete-button"> - </button>
+          </div>
         </li>
         ${documents.map((document) => drawSidebarDocumentTree([document])).join('')}
       </div>
