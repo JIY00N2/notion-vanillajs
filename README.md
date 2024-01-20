@@ -1,7 +1,7 @@
 # 📌 5주차 프로젝트[Project1]
 
 ## 배포
-
+[노션 배포](https://notion-vanillajs.vercel.app/)
 
 ## 실행 방법
 npm run dev
