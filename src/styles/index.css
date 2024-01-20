@@ -255,3 +255,7 @@ li {
   border-style: none;
   cursor: pointer;
 }
+
+.documents-tree > .hidden{
+  display: none;
+}

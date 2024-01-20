@@ -27,10 +27,13 @@ export default function SidebarDocumentTree({ $target, initialState, addDocument
           ({ id, title, documents }) => `
       <div class='documents-tree'>
         <li data-id="${id}">
-          <div class="document-title">▶️📄${title}</div>
-          <div class="document-buttons">
-            <button class="add-button"> + </button>
-            <button class="delete-button"> - </button>
+          <button class="toggle-button"> ${document.length ? "▶️" : "🔽"} </button>
+          <div class="document-area">
+            <div class="document-title"> 📄${title}</div>
+            <div class="document-buttons">
+              <button class="add-button"> + </button>
+              <button class="delete-button"> - </button>
+            </div>
           </div>
         </li>
         ${documents.map((document) => drawSidebarDocumentTree([document])).join('')}
@@ -48,6 +51,15 @@ export default function SidebarDocumentTree({ $target, initialState, addDocument
     $sidebarDocumentTree.innerHTML = `
       <div class="tree"><div class="outer-ul">${documentsTree}</div>${documentAddButton}</div>
     `;
+    const toggleButtons = $sidebarDocumentTree.querySelectorAll('.toggle-button');
+    for (const button of toggleButtons) {
+      button.addEventListener('click', function () {
+        const subTree = this.closest('.documents-tree').querySelector('ul');
+        if (subTree) {
+          subTree.classList.toggle('hidden');
+        }
+      });
+    }
   };
 
   this.render();
@@ -73,3 +85,4 @@ export default function SidebarDocumentTree({ $target, initialState, addDocument
     }
   });
 }
+
