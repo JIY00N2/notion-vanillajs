@@ -1,8 +1,8 @@
-import DocumentEditPage from './pages/mainPage/DocumentEditPage';
-import HomePage from './pages/mainPage/HomePage';
-import SidebarDocumentPage from './pages/sidebarPage/SidebarDocumentPage';
+import DocumentEditPage from './pages/MainPage/DocumentEditPage';
 import { initRouter } from './domain/router';
 import { validateComponent } from './utils/validation';
+import SidebarDocumentPage from './pages/SidebarPage/SidebarDocumentPage';
+import HomePage from './pages/MainPage/HomePage';
 
 export default function App({ $target }) {
   validateComponent(new.target);

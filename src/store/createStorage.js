@@ -1,4 +1,5 @@
 export default function createStorage(storage) {
+  
   const setItemToStorage = (key, value) => {
     storage.setItem(key, JSON.stringify(value));
   };

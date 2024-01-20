@@ -2,6 +2,7 @@ import request from './request';
 import { push } from './router';
 
 export { getDocument, createDocument, updateDocument, deleteDocument };
+
 const getDocument = async (id) => {
   return await request(`/documents/${id}`, {
     method: 'GET',
